@@ -1,6 +1,7 @@
 @setlocal enableextensions enabledelayedexpansion
 @echo off
 
+SET DT=%date:~4,2%%date:~7,2%%date:~12,2%%time:~0,2%%time:~3,2%%time:~6,2%
 :: Get GUID
 FOR /F "tokens=* USEBACKQ" %%F IN (`reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall /s /f "Trend Micro Deep Security Agent" ^| findstr {*}`) DO (SET GUID=%%F)
 SET GUID=%GUID:~72,-1%
@@ -50,7 +51,7 @@ for %%a in (%Services%) DO (sc stop %%a)
 for %%a in (%Services%) DO (sc delete %%a)
 
 :: Delete Registry Keys
-IF EXIST C:\HKLMBackup.Reg (reg export HKLM C:\HKLMBackup2.Reg /y) ELSE (reg export HKLM C:\HKLMBackup.Reg /y)
+reg export HKLM C:\%DT%HKLMBackup.Reg /y
 for %%a in (%GUIDRegistryKeys%) DO (reg delete %%a /F)
 for %%a in (%RegistryKeys%) DO (reg delete %%a /F)
 for %%a in (%x86Registry%) DO (reg delete %%a /F)
@@ -58,4 +59,3 @@ for %%a in (%x86Registry%) DO (reg delete %%a /F)
 :: Remove Directories and Files
 for %%a in (%Directories%) DO (del /s /q %%a)
 del /s /q "C:\Program Files\Trend Micro\Deep Security Agent"
-rmdir /s /q "C:\Program Files\Trend Micro"
