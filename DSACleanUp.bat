@@ -22,7 +22,9 @@ HKLM\SYSTEM\CurrentControlSet\Services\ds_notifier HKLM\SYSTEM\CurrentControlSet
 HKLM\SYSTEM\CurrentControlSet\Services\tmactmon HKLM\SYSTEM\CurrentControlSet\Services\tmcomm ^
 HKLM\SYSTEM\CurrentControlSet\Services\tmevtmgr HKLM\SYSTEM\CurrentControlSet\Services\tbimdsa ^
 HKLM\SYSTEM\CurrentControlSet\Services\tmeyes HKLM\SYSTEM\CurrentControlSet\Services\tmumh ^
-"HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application\Deep Security Agent" HKLM\Software\TrendMicro\WL "HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application\Deep Security Relay" HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\System\tbimdsa\ "HKLM\Software\TrendMicro\Deep Security Agent" HKLM\Software\TrendMicro\AMSP HKLM\Software\TrendMicro\AEGIS HKLM\Software\TrendMicro\AMSPStatus
+"HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application\Deep Security Agent" HKLM\Software\TrendMicro\WL ^
+"HKLM\SYSTEM\CurrentControlSet\Services\EventLog\Application\Deep Security Relay" HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\System\tbimdsa\ ^
+"HKLM\Software\TrendMicro\Deep Security Agent" HKLM\Software\TrendMicro\AMSP HKLM\Software\TrendMicro\AEGIS HKLM\Software\TrendMicro\AMSPStatus
 
 Set x86Registry=HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\UpgradeCodes\689D08D76B5A47A4FB59D97D2C4B9308\ ^
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer\UpgradeCodes\689D08D76B5A47A4FB59D97D2C4B9308\ ^
